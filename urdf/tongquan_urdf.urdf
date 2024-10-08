@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="tongquan_urdf">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.39275 -0.54469 -1.775E-05"
+        rpy="0 0 0" />
+      <mass
+        value="30.277" />
+      <inertia
+        ixx="14.781"
+        ixy="-6.7169E-06"
+        ixz="1.8274E-05"
+        iyy="11.964"
+        iyz="-2.5631E-05"
+        izz="9.8432" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tongquan_urdf/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tongquan_urdf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_1">
+    <inertial>
+      <origin
+        xyz="-0.0447173354246999 -0.173861680238512 0.00490359022196432"
+        rpy="0 0 0" />
+      <mass
+        value="3.09988384033343" />
+      <inertia
+        ixx="0.0073990239379727"
+        ixy="-0.00120736061694961"
+        ixz="0.000309533612822371"
+        iyy="0.00253569379982232"
+        iyz="-0.000102956081912359"
+        izz="0.00733489139564666" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tongquan_urdf/meshes/link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tongquan_urdf/meshes/link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_1"
+    type="continuous">
+    <origin
+      xyz="-0.057 -0.1735 0"
+      rpy="0 1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="3.142"
+      effort="300"
+      velocity="3" />
+  </joint>
+  <link
+    name="link_2">
+    <inertial>
+      <origin
+        xyz="-0.016199968374541 -0.219175022836154 0.0400412450741695"
+        rpy="0 0 0" />
+      <mass
+        value="2.46278335843155" />
+      <inertia
+        ixx="0.00405079419266658"
+        ixy="-1.9725480328776E-05"
+        ixz="0.000200857261483451"
+        iyy="0.0034119185108187"
+        iyz="-3.25390165572987E-05"
+        izz="0.00338161001241772" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tongquan_urdf/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tongquan_urdf/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2"
+    type="continuous">
+    <origin
+      xyz="-0.11203 -0.45851 -0.03"
+      rpy="0 0 0" />
+    <parent
+      link="link_1" />
+    <child
+      link="link_2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="200"
+      velocity="3" />
+  </joint>
+</robot>
